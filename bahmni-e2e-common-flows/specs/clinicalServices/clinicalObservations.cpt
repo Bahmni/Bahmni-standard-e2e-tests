@@ -1,0 +1,135 @@
+# Enter vitals <Vitals>
+* reload the page
+* wait for overlay to disappear
+* Click Vitals
+* Enter Form Values <Vitals>
+
+# Doctor issues an Admit disposition
+* Open clinical tab
+* Choose Disposition
+* Wait for message "The Disposition Note will also be removed" to disappear
+* Doctor advises admitting the patient
+* Save data
+
+# Doctor captures the consultation notes <consultationNotes> for newly created patient
+* Doctor clicks consultation
+* wait for overlay to disappear
+* Doctor captures consultation notes "Consultation notes"
+* Save data
+
+# Doctor issues an Discharge disposition
+* Choose Disposition
+* wait for overlay to disappear
+* Wait for message "The Disposition Note will also be removed" to disappear
+* Doctor advises discharging the patient
+* Save data
+
+# Doctor advises medicines <medicines> and tests <tests> and radiology
+* Doctor prescribes tests <tests>
+* Place a radiology order for test "chest lateral"
+* Doctor prescribes medications <medicines>
+
+# Doctor advises medicines <medicines> and tests <tests>
+* Doctor prescribes tests <tests>
+* Doctor prescribes medications <medicines>
+
+# Doctor opens Patient <program> dashboard
+* Open "Programs" module
+* Goto All sections and search the newly created patient
+* Open the program dashboard <program>
+
+# Doctor enrolls Patient onto <program> stage <stage> starting <startingDate> years ago with treatment start <treatmentStartDate> years ago, id <id>, dr incharge <doctorIncharge> and treatment stage <treatmentStage>
+* Open "Programs" module
+* Goto All sections and search the newly created patient
+* Enroll in program <program> stage <stage> starting <startingDate> years ago with treatment start <treatmentStartDate> years ago, id <id>, dr incharge <doctorIncharge> and treatment stage <treatmentStage>
+* Open the program dashboard <program>
+
+# Goto All sections and search the newly created patient
+* Goto All sections
+* Search the newly created patient
+* wait for overlay to disappear
+
+# Doctor prescribes medications <medication>
+* Open "Medications" Tab
+* Doctor prescribes medicines <medication>
+* Save data
+
+# Doctor prescribes tests <tests>
+* Open "Orders" Tab
+* Doctor prescribe tests <tests>
+* Save data
+
+# The doctor joins the link for the appointment
+* Open "Appointment scheduling" module
+* View all appointments
+* Goto appointments's date
+* Click patient name
+* Join teleconsultation
+
+# Enroll in program <program> stage <programStage> starting <numberOfYearsAgo_startDate> years ago with treatment start <numberOfYearsAgo_treatmentDate> years ago, id <id>, dr incharge <doctor> and treatment stage <stage>
+* Begin new program enrollment
+* Create a program <program>
+* Select program starting <numberOfYearsAgo_startDate> years ago with treatment start <numberOfYearsAgo_treatmentDate> years ago
+* Select other details id "1234", dr incharge "doctor" and treatment stage "Initial Stage"
+* Enroll in program
+
+# Doctor notes the diagnosis and conditions <diagnosis_condition>
+* Open "Diagnoses" Tab
+* Doctor notes the diagnosis and condition <diagnosis_condition>
+* Save data
+
+# Enter History and Examination details <historyExamination>
+* Enter History and examination details <historyExamination>
+* Save data
+
+# Doctor adds a drug that has contraindication with the diagnosis <diagnosisName>
+* Doctor add the drug for <diagnosisName>
+
+# Enter Form Values and validate no error is displayed on save <formPath>
+* Enter Form Values <formPath>
+* Verify no error displayed on page
+
+# Doctor prescribes a drug <medications> that is contraindicated for the patient's diagnosis
+* Open "Medications" Tab
+* Doctor prescribes medicines <medications>
+
+# Verify that the medication is striked off after it is dismissed
+* Click on cross button to close the alert
+* Verify that the medication is striked off
+
+# Verify the dosage alert message is displayed for the substance <drugName>
+* Verify the dosage alert message for the substances <drugName>
+* Click on cross button to close the alert
+
+# Doctor add drugs <medications> which are contraindicative with each other
+* Open "Medications" Tab
+* Doctor prescribes medicines <medications>
+
+# Doctor add a drug with high dosage <medications>
+* Open "Medications" Tab
+* Doctor prescribes medicines <medications>
+
+# Doctor add diagnosis <diagnosisName>
+ * Open clinical tab
+ * Open "Diagnoses" Tab
+ * Doctor add the diagnosis for <diagnosisName> having ICD-10 codes
+ * Save data
+
+# Navigate to the ICD Mappings Demonstrator and retrieve the ICD-10 codes for <diagnosisName> using the mapRule associated with the <mapRuleCondition> condition
+* Navigate to ICD Mappings Demonstrator portal
+* Enter <diagnosisName> with <mapRuleCondition>
+* Get the ICD-10 code for the SNOMED diagnosis
+
+# Doctor select the reason for dismissal
+* Verify that a list of reasons for dismissal is displayed
+* Doctor is able to select the reason for dismissal
+
+# Doctor Refills the medications
+* Open "Medications" Tab
+* Refill medicines
+* Save data
+
+# Doctor stops the medications
+* Open "Medications" Tab
+* Stop medications
+* Save data

@@ -1,0 +1,41 @@
+{
+    "ObservationFormName": "Blood Pressure",
+    "ObservationFormDetails": [
+        {
+            "type": "Group",
+            "label": "Blood Pressure",
+            "value": [
+                {
+                    "type": "Group",
+                    "label": "Systolic Data",
+                    "value": [
+                        {
+                            "type": "TextBox",
+                            "label": "Systolic (mm Hg)",
+                            "short_name": "Systolic",
+                            "value": "120"
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "label": "Diastolic Data",
+                    "value": [
+                        {
+                            "type": "TextBox",
+                            "label": "Diastolic (mm Hg)",
+                            "short_name": "Diastolic",
+                            "value": "76"
+                        }
+                    ]
+                },
+                {
+                    "type": "Button",
+                    "label": "Posture",
+                    "short_name": "Posture",
+                    "value": "Sitting"
+                }
+            ]
+        }
+    ]
+}

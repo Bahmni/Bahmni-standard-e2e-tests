@@ -1,0 +1,64 @@
+# Login to Payment lite as <user>
+* Enter crater Email for <user>
+* Enter crater Password for <user>
+* Click Login
+
+# Logout of Payment Lite
+* Click on user menu
+* Click Logout
+
+# Create a patient in Payment Lite
+* Open Customers
+* Enter patient details in paymentLite
+* Select currency as "INR - Indian Rupee"
+* Save customer
+
+# Create a doctor in Payment Lite with consultation fee <fees>
+* Click Items
+* Add doctor with fees <fees>
+
+# Create drug with price <price>
+* Click Items
+* Add a drug with price <price>
+
+# Raise an invoice for patient
+* Click Customers
+* Select customer
+* Click New Transaction
+* Create a new invoice
+* Add items to invoice
+* Save Invoice
+* Note the Date, Invoice Number and Amount
+
+# Add items to invoice
+* Choose the doctor in paymentlite
+* Add a new Item
+* Choose the prescibed medicines in paymentlite
+
+# Collect the payment from the patient
+* Click Payments
+* Enter patient name for payment
+* Associate the invoice to the payment
+* Select the payment mode as "cash"
+* Save payment
+
+# Note the Date, Invoice Number and Amount
+* Click Invoices
+* Goto the tab Draft
+* Goto the tab All
+* Note the Date
+* Note the Invoice Number
+* Note the Amount
+
+# Verify the payment is complete
+* Click Invoices
+* Goto the tab Draft
+* Goto the tab All
+* open the invoice
+* verify the payment is complete
+
+# Run report and validate
+* goto reports in payment lite
+* Validate Report is displayed
+* Download the report
+* Validate the downloaded report

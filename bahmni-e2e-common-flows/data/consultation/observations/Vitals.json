@@ -1,0 +1,52 @@
+{
+    "ObservationFormName": "Vitals",
+    "ObservationFormDetails": [
+        {
+            "type": "TextBox",
+            "label": "Pulse",
+            "value": "70",
+            "unit":"(/min)"
+        },
+        {
+            "type": "TextBox",
+            "label": "SPO2",
+            "value": "99",
+            "unit":"(%)"
+        },
+        {
+            "type": "TextBox",
+            "label": "RR",
+            "value": "99",
+            "unit":"(/min)"
+        },
+        {
+            "type": "TextBox",
+            "label": "Temperature",
+            "value": "99",
+            "unit":"(F)"
+        },
+        {
+            "type": "Group",
+            "label": "Blood Pressure",
+            "value": [
+                {
+                    "type": "TextBox",
+                    "label": "Diastolic",
+                    "value": "110",
+                    "unit":"(mm Hg)"
+                },
+                {
+                    "type": "TextBox",
+                    "label": "Systolic",
+                    "value": "110",
+                    "unit":"(mm Hg)"
+                },
+                {
+                    "type": "Button",
+                    "label": "Posture",
+                    "value": "Sitting"
+                }
+            ]
+        }
+    ]
+}
