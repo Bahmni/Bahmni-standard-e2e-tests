@@ -1,6 +1,6 @@
 # Gauge tests for Bahmni Standard E2E tests
 
-![E2E tests result](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/main.yml/badge.svg?branch=main)
+[![Bahmni Standard V94 E2E Tests](https://github.com/Bahmni/Bahmni-standard-e2e-tests/actions/workflows/BahmniStandardV94.yml/badge.svg)](https://github.com/Bahmni/Bahmni-standard-e2e-tests/actions/workflows/BahmniStandardV94.yml)
 
 This repo is for End to End tests for Bahmni Standard.
 
