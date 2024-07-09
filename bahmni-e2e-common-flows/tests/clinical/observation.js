@@ -15,7 +15,6 @@ const {
     scrollTo,
     reload,
     highlight,
-    link
 } = require('taiko');
 const taikoHelper = require("../util/taikoHelper")
 const fileExtension = require("../util/fileExtension")
@@ -37,9 +36,8 @@ step("Enter History and examination details <filePath>", async function (filePat
     for (var chiefComplaint of historyAndExaminationDetails.Chief_Complaints) {
         await scrollTo("Chief Complaint")
         await write(chiefComplaint.Chief_Complaint, into(textBox(toRightOf("Chief Complaint"))));
-        await scrollTo("Chief Complaint");
-        await waitFor(async () => (await link(chiefComplaint.Chief_Complaint).exists()));
-        await click(link(chiefComplaint.Chief_Complaint));
+        await scrollTo("Chief Complaint")
+        await click('Accept', { force: true });
         await write(chiefComplaint.for, into(textBox(toRightOf("for"))));
         await dropDown(toRightOf("for")).select(chiefComplaint.for_frequency);
     }
@@ -47,7 +45,7 @@ step("Enter History and examination details <filePath>", async function (filePat
     await write(historyAndExaminationDetails.History_Notes, into(textBox("History Notes")));
     await write(historyAndExaminationDetails.Examination_notes, into(textBox("Examination Notes")));
     await click(historyAndExaminationDetails.Smoking_History, toRightOf("Smoking History"));
-    await attach(path.join('./bahmni-e2e-common-flows/data/consultation/observations/patientReport.jpg'), fileField({ id: "file-browse-observation_9" }));
+    await attach(path.join('./bahmni-e2e-common-flows/data/consultation/obsevations/patientReport.jpg'), fileField({ id: "file-browse-observation_9" }));
 });
 
 step("Click patient name", async function () {

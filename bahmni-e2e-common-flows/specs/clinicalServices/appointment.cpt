@@ -18,12 +18,10 @@
 * Open calender at time <appointmentTime>
 * Select patient
 * Search and select service
-* Select Regular Appointment option
-* Select "Scheduled" appointment status
+* select the walk in appointment option
 * Check and Save
 * wait for "1000"
-* Select List View in Appointments
-* Get Apointmnet Date and Time
+* Click Close
 
 # Receptionist creates a recurring appointment for days <days> at time <appointmentTime>
 * Open "Appointment scheduling" module
@@ -34,12 +32,11 @@
 * Search and select service
 * select the recurring appointment option
 * select the Start date as today
-* select the End date as after "5" occurence
-* select Repeats every <days> "Day(s)"
+* select the End date as after few occurances                
+* select Repeats every <days> days
 * Check and Save
 * wait for "1000"
-* Select List View in Appointments
-* Get Apointmnet Date and Time
+* Click Close
 
 # Receptionist cancels the newly created appointment
 * Click back button
@@ -67,13 +64,10 @@
 * Open calender at time <appointmentTime>
 * Select patient
 * Search and select service
-* Select Regular Appointment option
-* Select "Scheduled" appointment status
 * select the teleconsultation appointment option
 * Check and Save
 * wait for "1000"
-* Select List View in Appointments
-* Get Apointmnet Date and Time
+* Click Close
 
 # The patient's appointment should not be found
 * Click back button

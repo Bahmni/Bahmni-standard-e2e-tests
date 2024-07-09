@@ -1,8 +1,8 @@
-# Gauge tests for Bahmni Standard E2E tests
+# Gauge tests for Bahmni Standard V93 E2E tests
 
 [![Bahmni Standard V94 E2E Tests](https://github.com/Bahmni/Bahmni-standard-e2e-tests/actions/workflows/BahmniStandardV94.yml/badge.svg)](https://github.com/Bahmni/Bahmni-standard-e2e-tests/actions/workflows/BahmniStandardV94.yml)
 
-This repo is for End to End tests for Bahmni Standard.
+This repo is for End to End tests for Bahmni Standard V93.
 
 # Pre-requisites
 * [Node-js](https://nodejs.org/en/)
