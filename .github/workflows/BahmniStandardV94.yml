@@ -32,7 +32,7 @@ env:
   TEST_CONTEXT: ${{ github.event.inputs.TEST_CONTEXT || 'hospital & regression' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'docker.standard' }}
   ENV_FLAG: false
-  TARGET_BRANCH: ${{ github.event.inputs.TARGET_BRANCH || 'Bahmni_Standard_V94'}}
+  TARGET_BRANCH: ${{ github.event.inputs.TARGET_BRANCH || 'main'}}
   LANGUAGE: en-IN
 jobs:
   build-and-run:
@@ -43,9 +43,9 @@ jobs:
         if: github.event.schedule=='30 0 * * *'
         run: |
           echo "TARGET_ENV=docker.standard" >> $GITHUB_ENV
-          echo "TEST_CONTEXT=hospital" >> $GITHUB_ENV
+          echo "TEST_CONTEXT=hospital & regression" >> $GITHUB_ENV
           echo "TEST_SETUP=true" >> $GITHUB_ENV
-          echo "TARGET_BRANCH=Bahmni_Standard_V94" >> $GITHUB_ENV
+          echo "TARGET_BRANCH=main" >> $GITHUB_ENV
       - name: Show current Env variables
         run: |
           echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}} TARGET_BRANCH - ${{env.TARGET_BRANCH}}"
