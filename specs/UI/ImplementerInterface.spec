@@ -22,7 +22,7 @@ tags: master-data-management
 
 ## Admin should be able to create a form and validate on patient dashboard
 
-tags: ui, hospital, regression
+tags: hospital, regression
 
 * Login to openMRS as user "admin"
 * Goto Administration

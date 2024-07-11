@@ -1,7 +1,5 @@
 # Snomed CDSS Diagnosis-Drug Alert
 
-tags: ui
-
 ## Doctor should be able to get contraindication critical alert for the diagnosis-drugs interaction
 
 tags: snomed, ui

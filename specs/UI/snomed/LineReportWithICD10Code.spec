@@ -1,6 +1,6 @@
 # SNOMED Diagnosis Line Report with ICD-10 Code
 
-tags: ui
+
 
 ## Doctor should be able to validate Line report with ICD-10 code
 

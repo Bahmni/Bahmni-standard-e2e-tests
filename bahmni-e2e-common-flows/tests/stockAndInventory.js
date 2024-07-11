@@ -85,6 +85,7 @@ step("Click <Products> from Odoo top menu and select <Products> from dropdown", 
 async function clickMenu(strMenu, strSubMenu) {
     await click($("//DIV[@role='menu']//button[@class='dropdown-toggle']/SPAN[normalize-space()='" + strMenu + "']"));
     await waitFor(500);
+    await waitFor(async () => (await $("//A[@class='dropdown-item']").exists()));
     await click($("//A[@class='dropdown-item'][normalize-space()='" + strSubMenu + "']"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
     await waitFor(1000);
 }

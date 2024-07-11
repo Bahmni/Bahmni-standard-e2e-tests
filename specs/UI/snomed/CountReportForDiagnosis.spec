@@ -1,6 +1,6 @@
 # Snomed Diagnosis Count report
 
-tags: ui
+
 
 ## Doctor should be able to check count reports for the malaria
 

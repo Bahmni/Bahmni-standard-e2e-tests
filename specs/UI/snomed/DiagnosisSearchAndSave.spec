@@ -1,6 +1,5 @@
 # Diagnosis Search and Save
 
-tags: ui
 
 ## Doctor should be able to add Diagnosis and save which is coming from snomed ct server
 

@@ -1,12 +1,12 @@
 # SNOMED Diagnosis Line Report
 
-tags: ui
+
 
 ## Doctor should be able to validate Line report for malaria
 
 tags: snomed, ui
 
-* Login to Bahmni as a "receptionist" 
+* Login to Bahmni as a "receptionist"
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "malaria"
@@ -27,7 +27,7 @@ tags: snomed, ui
 
 tags: snomed, ui
 
-* Login to Bahmni as a "receptionist" 
+* Login to Bahmni as a "receptionist"
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
@@ -48,7 +48,7 @@ tags: snomed, ui
 
 tags: snomed, ui
 
-* Login to Bahmni as a "receptionist" 
+* Login to Bahmni as a "receptionist"
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "covid-19"
