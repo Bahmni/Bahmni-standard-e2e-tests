@@ -1,9 +1,9 @@
-const { goto, $, below, write, textBox, into, click, clear, toLeftOf, checkBox, reload, text, waitFor, highlight, screenshot, button, within, press, evaluate, tableCell, link, radioButton, dropDown } = require('taiko');
+const { goto, $, below, write, textBox, into, click, clear, toLeftOf, checkBox, reload, text, waitFor, highlight, screenshot, button, within, press, evaluate, tableCell, link, radioButton, dropDown, hover, scrollTo } = require('taiko');
 var assert = require("assert");
 const helper = require('csvtojson');
 const { type } = require('os');
 const listTable = "//table[contains(@class,'list_table')]"
-const { faker } = require('@faker-js/faker/locale/en_IND');
+const { faker } = require('@faker-js/faker/locale/en_IN');
 var fileExtension = require("./util/fileExtension");
 const Decimal = require("decimal.js");
 const moment = require('moment');
@@ -76,17 +76,24 @@ step("Click Odoo Home button", async function () {
 step("Click Odoo Home button and select <menu>", async function (menu) {
     await click(button({ title: "Home Menu" }));
     await click($("//A[@role='menuitem'][normalize-space()='" + menu + "']"));
+    await waitFor(3000);
 });
 
 step("Click <Products> from Odoo top menu and select <Products> from dropdown", async function (strMenu, strSubMenu) {
-    await clickMenu(strMenu, strSubMenu);
     await waitFor(1000);
+    await clickMenu(strMenu, strSubMenu);
+    await waitFor(2000);
 });
 async function clickMenu(strMenu, strSubMenu) {
-    await click($("//DIV[@role='menu']//button[@class='dropdown-toggle']/SPAN[normalize-space()='" + strMenu + "']"));
-    await waitFor(500);
-    await waitFor(async () => (await $("//A[@class='dropdown-item']").exists()));
-    await click($("//A[@class='dropdown-item'][normalize-space()='" + strSubMenu + "']"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
+    await evaluate($("//DIV[@role='menu']//button[@class='dropdown-toggle']/SPAN[normalize-space()='" + strMenu + "']/.."), (el) => el.click());
+    await waitFor(1000);
+    var submenu = `//A[contains(@class,"dropdown-item") and normalize-space(text())="${strSubMenu}"]`
+    console.log(submenu)
+    await highlight(link(strSubMenu))
+    await highlight($(submenu))
+    // await scrollTo($("//A[@class='dropdown-item'][normalize-space()='" + strSubMenu + "']"))
+    // await waitFor(async () => (await $("//A[@class='dropdown-item'][normalize-space()='" + strSubMenu + "']").exists()),30000);
+    await evaluate($(submenu), (el) => el.click());
     await waitFor(1000);
 }
 step("Enter the concept name in search box", async function () {

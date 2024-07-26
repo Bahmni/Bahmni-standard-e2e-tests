@@ -31,7 +31,7 @@ const {
 var users = require("../util/users");
 var date = require("../util/date");
 const taikoHelper = require("../util/taikoHelper")
-const { faker } = require('@faker-js/faker/locale/en_IND');
+const { faker } = require('@faker-js/faker/locale/en_IN');
 var assert = require("assert");
 
 step("Open <moduleName> module", async function (moduleName) {
@@ -47,7 +47,7 @@ step("Enter patient random first name", async function () {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
     var patientGender = users.getRandomPatientGender();
     if (!firstName) {
-        firstName = faker.name.firstName(patientGender).replace(" ", "");
+        firstName = faker.person.firstName(patientGender).replace(" ", "");
         gauge.dataStore.scenarioStore.put("patientFirstName", firstName)
     }
     gauge.message(`firstName ${firstName}`)
@@ -58,7 +58,7 @@ step("Enter patient random middle name", async function () {
     var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
     var patientGender = users.getRandomPatientGender()
     if (!middleName) {
-        middleName = faker.name.middleName(patientGender).replace(" ", "");
+        middleName = faker.person.middleName(patientGender).replace(" ", "");
         gauge.dataStore.scenarioStore.put("patientMiddleName", middleName)
     }
     gauge.message(`middleName ${middleName}`)
@@ -71,7 +71,7 @@ step("Enter patient random last name", async function () {
     var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
     var patientGender = users.getRandomPatientGender()
     if (!lastName) {
-        lastName = faker.name.lastName(patientGender).replace(" ", "");
+        lastName = faker.person.lastName(patientGender).replace(" ", "");
         gauge.dataStore.scenarioStore.put("patientLastName", lastName)
     }
     gauge.message(`lastName ${lastName}`)
@@ -162,7 +162,7 @@ step("Login as user <user> with location <location>", async function (user, loca
     if (loginLocation) {
         await dropDown("Location").select(loginLocation);
     } else {
-        var randomIndex = (faker.datatype.number({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
+        var randomIndex = (faker.datatype.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
         await dropDown("Location").select({ index: randomIndex });
         gauge.dataStore.scenarioStore.put("loginLocation", await evaluate(() => {
             const dropdown = document.querySelector('#location');
@@ -185,7 +185,7 @@ step("Login as user <user>", async function (user) {
     if (loginLocation) {
         await dropDown("Location").select(loginLocation);
     } else {
-        var randomIndex = (faker.datatype.number({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
+        var randomIndex = (faker.datatype.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
         await dropDown("Location").select({ index: randomIndex });
         gauge.dataStore.scenarioStore.put("loginLocation", await evaluate(() => {
             const dropdown = document.querySelector('#location');
@@ -411,7 +411,7 @@ step("Enter patient random gender", async function () {
 });
 
 step("Enter random age of the patient", async function () {
-    var age = faker.random.numeric(2);
+    var age = faker.string.numeric(2);
     if (gauge.dataStore.scenarioStore.get("isNewPatient")) {
         await write(age, into(textBox(toRightOf("Years"))));
         await click(checkBox(toLeftOf("Estimated")));
@@ -438,7 +438,7 @@ step("Enter patient random mobile number", async function () {
 });
 
 step("Enter random village", async function () {
-    var village = faker.address.cityName();
+    var village = faker.location.city();
     gauge.dataStore.scenarioStore.put("village", village)
     if (gauge.dataStore.scenarioStore.get("isNewPatient"))
         await write(village, into(textBox(toRightOf("Village"))))

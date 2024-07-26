@@ -13,8 +13,8 @@
     },
     "products": [
         {
-            "name": "Fluoxetine 20mg",
-            "description": "Fluoxetine 20mg (Capsule)",
+            "name": "Isosorbide dinitrate 5 mg",
+            "description": "Isosorbide dinitrate 5 mg (Tablet)",
             "quantity": 10,
             "UoM": "Unit(s)",
             "Unit Price": "10.00",

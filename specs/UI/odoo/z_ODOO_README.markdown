@@ -17,6 +17,9 @@
 - In **Home -> Bahmni -> Bahmni Masters -> Sale price markup rule**, the markup percentage should be 10% for minimum cost 10 to maximum cost 100.
 ![alt text](readme_images/markup_rule.png)
 
+- In **Settings -> Sales -> Unit Of Measure -> Units**, Unit of Measue should be Unit(s) instead of Units.
+![alt text](readme_images/Uom.png)
+
 ## Automated Scenarios
 
 ### Odoo Purchase Flow
