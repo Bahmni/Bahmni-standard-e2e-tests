@@ -64,7 +64,7 @@ function getRandomPatientGender() {
 
 async function downloadAndReturnImage() {
     fileExtension.createDirIfNotPresent("temp");
-    var filepath = "temp/image" + faker.datatype.int({ min: 1, max: 100 }) + ".jpg"
+    var filepath = "temp/image" + faker.number.int({ min: 1, max: 100 }) + ".jpg"
     var response = "";
     let max_Retry = 5
     while (max_Retry > 0) {
@@ -95,7 +95,7 @@ async function downloadAndReturnBase64Image() {
 
 async function randomZipCodeStateAndDistrict() {
     let jsonfile = await csv().fromFile(path.resolve(__dirname, "../../data/", process.env.addresshierarchyPath));
-    var randomRow = faker.datatype.int({ min: 1, max: jsonfile.length });
+    var randomRow = faker.number.int({ min: 1, max: jsonfile.length });
     var pincode = jsonfile[randomRow]["ZIP"]
     gauge.dataStore.scenarioStore.put("pincode", pincode)
     var state = jsonfile[randomRow]["STATE"]

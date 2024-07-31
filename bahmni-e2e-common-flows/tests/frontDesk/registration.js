@@ -162,7 +162,7 @@ step("Login as user <user> with location <location>", async function (user, loca
     if (loginLocation) {
         await dropDown("Location").select(loginLocation);
     } else {
-        var randomIndex = (faker.datatype.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
+        var randomIndex = (faker.number.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
         await dropDown("Location").select({ index: randomIndex });
         gauge.dataStore.scenarioStore.put("loginLocation", await evaluate(() => {
             const dropdown = document.querySelector('#location');
@@ -185,7 +185,7 @@ step("Login as user <user>", async function (user) {
     if (loginLocation) {
         await dropDown("Location").select(loginLocation);
     } else {
-        var randomIndex = (faker.datatype.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
+        var randomIndex = (faker.number.int({ min: 2, max: (await dropDown('Location').options()).length }) - 1)
         await dropDown("Location").select({ index: randomIndex });
         gauge.dataStore.scenarioStore.put("loginLocation", await evaluate(() => {
             const dropdown = document.querySelector('#location');
