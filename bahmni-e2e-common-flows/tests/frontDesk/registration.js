@@ -169,7 +169,7 @@ step("Login as user <user> with location <location>", async function (user, loca
             return dropdown.options[dropdown.selectedIndex].text;
         }));
     }
-    await click(button("Submit Location"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
+    await click(button("Continue"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
     await taikoHelper.repeatUntilNotFound(text("BAHMNI EMR LOGIN"))
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
@@ -192,7 +192,7 @@ step("Login as user <user>", async function (user) {
             return dropdown.options[dropdown.selectedIndex].text;
         }));
     }
-    await click(button("Submit Location"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
+    await click(button("Continue"), { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
     await taikoHelper.repeatUntilNotFound(text("BAHMNI EMR LOGIN"))
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
