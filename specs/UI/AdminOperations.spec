@@ -65,6 +65,4 @@ tags: setup
 
 * Login to Bahmni as a "admin"
 * Goto the openMRS Admin tab
-* Do Search Index
-* Goto Administration
 * Give "OT: FullAccess" to "receptionist"
